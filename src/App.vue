@@ -1,28 +1,26 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <el-row type="flex" justify="center">
+    <el-col :span="18">
+      <Header />
+    </el-col>
+  </el-row>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Vue from "vue";
+import Header from "./components/Header.vue";
+import { Row, Col } from "element-ui";
+import "./normalize.css";
+
+Vue.component(Row.name, Row);
+Vue.component(Col.name, Col);
 
 export default {
   name: "App",
   components: {
-    HelloWorld
+    Header
   }
 };
 </script>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+<style lang="scss"></style>
