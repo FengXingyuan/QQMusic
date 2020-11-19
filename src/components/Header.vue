@@ -32,7 +32,11 @@
         suffix-icon="el-icon-search"
       >
       </el-input>
-      <el-dropdown-menu slot="dropdown" :visible-arrow="false">
+      <el-dropdown-menu
+        class="dropdown-menu"
+        slot="dropdown"
+        :visible-arrow="false"
+      >
         <MenuItem :id="1" name="我们的歌" :count="89.8" />
         <MenuItem :id="2" name="冰雪奇缘2" :count="76.8" />
         <MenuItem :id="3" name="张杰" :count="54.1" />
@@ -50,7 +54,11 @@
         <div class="header__Vip">
           开通VIP<i class="el-icon-arrow-down el-icon--right"></i>
         </div>
-        <el-dropdown-menu slot="dropdown" :visible-arrow="false">
+        <el-dropdown-menu
+          class="dropdown-menu"
+          slot="dropdown"
+          :visible-arrow="false"
+        >
           <div class="header__VipItem">开通绿钻豪华版</div>
           <div class="header__VipDivider"></div>
           <div class="header__VipItem">开通付费包</div>
@@ -60,7 +68,11 @@
         <div class="header__Charge">
           充值<i class="el-icon-arrow-down el-icon--right"></i>
         </div>
-        <el-dropdown-menu slot="dropdown" :visible-arrow="false">
+        <el-dropdown-menu
+          class="dropdown-menu"
+          slot="dropdown"
+          :visible-arrow="false"
+        >
           <div class="header__ChargeItem">购买乐币</div>
           <div class="header__ChargeDivider"></div>
           <div class="header__ChargeItem">充值饭票</div>
@@ -200,6 +212,11 @@ export default {
       }
     }
   }
+}
+
+.dropdown-menu {
+  padding: 0;
+  margin: 0;
 }
 
 input[type="radio"] {

@@ -1,10 +1,12 @@
 <template>
   <div class="tabs">
-    <input type="radio" :name="name" id="-1" checked />
-    <label class="tabs__item" for="-1">{{ tabs[0] }}</label>
+    <input type="radio" :name="name" :id="name" checked />
+    <label class="tabs__item" :for="name">{{ tabs[0] }}</label>
     <template v-for="(item, index) in list">
-      <input type="radio" :name="name" :id="index" :key="index" />
-      <label class="tabs__item" :for="index" :key="index">{{ item }}</label>
+      <input type="radio" :name="name" :id="name + index" :key="name + index" />
+      <label class="tabs__item" :for="name + index" :key="name + index">
+        {{ item }}
+      </label>
     </template>
   </div>
 </template>

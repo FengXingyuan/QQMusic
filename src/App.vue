@@ -10,6 +10,8 @@
         <Tabs :tabs="headerTabs" name="headerTabs" />
       </el-col>
     </el-row>
+    <SongList />
+    <NewSong />
   </div>
 </template>
 
@@ -17,6 +19,8 @@
 import Vue from "vue";
 import Header from "./components/Header.vue";
 import Tabs from "./components/Tabs.vue";
+import NewSong from "./components/NewSong.vue";
+import SongList from "./components/SongList.vue";
 import { Row, Col } from "element-ui";
 import "./normalize.css";
 
@@ -27,7 +31,9 @@ export default {
   name: "App",
   components: {
     Header,
-    Tabs
+    Tabs,
+    SongList,
+    NewSong
   },
   data: function() {
     return {
@@ -47,4 +53,11 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+::v-deep .carousel {
+  .el-carousel__arrow {
+    height: 100px;
+    width: 100px;
+  }
+}
+</style>
