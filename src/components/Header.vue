@@ -13,12 +13,12 @@
       <label class="header__tabs" for="tab3" v-popover:popover>客户端</label>
       <el-popover
         ref="popover"
-        content="提示文字"
-        title="title"
         trigger="hover"
-        width="200"
-        visible-arrow="false"
+        width="160"
+        :visible-arrow="false"
+        placement="bottom-start"
       >
+        <img src="./6.png" style="width: 160px" />
       </el-popover>
       <input type="radio" name="tabs" id="tab4" />
       <label class="header__tabs" for="tab4">开放平台</label>
@@ -116,6 +116,9 @@ export default {
 
   &__left {
     display: flex;
+    img {
+      width: 200px;
+    }
   }
   &__tabs {
     display: block;

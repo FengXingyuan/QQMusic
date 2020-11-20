@@ -4,7 +4,7 @@
     <Tabs :tabs="newsongTabs" name="newsongTabs" />
     <el-carousel
       class="carousel"
-      height="320px"
+      height="340px"
       trigger="click"
       indicator-position="outside"
       :autoplay="false"
